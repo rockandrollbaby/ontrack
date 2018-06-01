@@ -7,6 +7,8 @@ $(document).ready(function() {
     var backEnd = $("select#backEnd").val();
     var macPC = $("select#macPC").val();
 
+    var career = (companySize + webApplications + frameWork + backEnd + macPC);
+
     $("#track").empty().append(career);
     $("#career").show();
 
