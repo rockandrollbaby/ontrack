@@ -7,11 +7,8 @@ $(document).ready(function() {
     var backEnd = $("select#backEnd").val();
     var macPC = $("select#macPC").val();
 
-
-
-
-    $("#rate").empty().append(quote);
-    $("#track").show();
+    $("#track").empty().append(career);
+    $("#career").show();
 
     event.preventDefault();
   });
