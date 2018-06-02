@@ -1,17 +1,19 @@
 $(document).ready(function() {
-  $("form#coding").submit(function(event) {
+    $("#coding").submit(function(event) {
 
-    var companySize = $("select#companySize").val();
-    var webApplications = $("select#webApplications").val();
-    var frameWork = $("select#frameWork").val();
-    var backEnd = $("select#backEnd").val();
-    var macPC = $("select#macPC").val();
+      var companySize = $("select#companySize").val();
+      var webApplications = $("select#webApplications").val();
+      var frameWork = $("select#frameWork").val();
+      var frontBack = $("select#backEnd").val();
+      var macPC = $("select#macPC").val();
 
-    var career1 = (companySize + webApplications + frameWork + backEnd + macPC);
+      if (companySize === 'large' && webApplications === 'desktop' && frameWork === 'angular' &&  frontBack === 'frontend' && macPC === 'pc') {
+          $('#track1').show();
 
-    $("#track").empty().append(career);
-    $("#career").show();
+     } else {
+       $('#track2').show();
+     }
 
-    event.preventDefault();
+      event.preventDefault();
+    });
   });
-});
